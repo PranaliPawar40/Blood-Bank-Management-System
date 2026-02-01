@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Donor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="page-header">
+            <h2>🔍 Search Blood Donor</h2>
+            <a href="/dashboard" class="back-link">← Back to Dashboard</a>
+        </header>
+
+        <form action="/search-donor" method="POST" class="form-card">
+
+            <label for="blood_group">Blood Group</label>
+            <select name="blood_group" id="blood_group" required>
+                <option value="">Select Blood Group</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+            </select>
+
+            <label for="location">Location (optional)</label>
+            <input
+                type="text"
+                name="location"
+                id="location"
+                placeholder="Enter city or area"
+            >
+
+            <label for="pincode">Pincode (optional)</label>
+            <input
+                type="text"
+                name="pincode"
+                id="pincode"
+                placeholder="Enter pincode"
+            >
+
+            <button type="submit" class="submit-btn">
+                Search Donors
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

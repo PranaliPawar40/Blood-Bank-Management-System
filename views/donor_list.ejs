@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Donors</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Available Donors</h1>
+            <a class="back-btn" href="/search">← Back to Search</a>
+        </header>
+
+        <% if (typeof message !== 'undefined') { %>
+            <p class="message"><%= message %></p>
+        <% } %>
+
+        <% if (donors.length === 0) { %>
+            <p class="no-donors">No donors found.</p>
+        <% } else { %>
+            <table class="donor-table">
+                <thead>
+                    <tr>
+                        <th>Blood Group</th>
+                        <th>Location</th>
+                        <th>Pincode</th>
+                        <th>Contact Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% donors.forEach(donor => { %>
+                        <tr>
+                            <td><%= donor.blood_group %></td>
+                            <td><%= donor.location %></td>
+                            <td><%= donor.pincode %></td>
+                            <td><%= donor.contact_number %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } %>
+    </div>
+</body>
+</html>

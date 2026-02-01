@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Registration</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Donate Blood</h1>
+            <form action="/logout" method="GET" style="margin:0;">
+                <button type="submit" class="back-btn">Logout</button>
+            </form>
+        </header>
+
+        <main>
+            <form action="/donor" method="POST" class="form-card">
+                <h2>Donor Registration</h2>
+
+                <label for="age">Age</label>
+                <input type="number" name="age" id="age" placeholder="Enter your age" required>
+
+                <label for="blood_group">Blood Group</label>
+                <select name="blood_group" id="blood_group" required>
+                    <option value="">Select Blood Group</option>
+                    <option>A+</option><option>A-</option>
+                    <option>B+</option><option>B-</option>
+                    <option>O+</option><option>O-</option>
+                    <option>AB+</option><option>AB-</option>
+                </select>
+
+                <label for="contact_number">Contact Number</label>
+                <input type="text" name="contact_number" id="contact_number" placeholder="10-digit phone number" required>
+
+                <label for="location">Location</label>
+                <input type="text" name="location" id="location" placeholder="Enter your city or area" required>
+
+                <label for="pincode">Pincode</label>
+                <input type="text" name="pincode" id="pincode" placeholder="Enter pincode" required>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </main>
+
+    </div>
+</body>
+</html>
+
+<% if (typeof error !== 'undefined') { %>
+<script>
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops!',
+        text: '<%= error %>',
+        confirmButtonColor: '#dc3545'
+    });
+</script>
+<% } %>

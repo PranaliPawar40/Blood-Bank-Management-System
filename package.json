@@ -1,0 +1,21 @@
+{
+  "name": "bloodbankproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "dotenv": "^17.2.3",
+    "ejs": "^4.0.1",
+    "express": "^4.22.1",
+    "express-session": "^1.19.0",
+    "mysql2": "^3.16.1"
+  }
+}

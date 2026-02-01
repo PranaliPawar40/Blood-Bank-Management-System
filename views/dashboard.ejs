@@ -1,0 +1,20 @@
+<%- include('partials/header', { user: true }) %>
+
+<h3>Welcome, <span class="text-danger"><%= name %></span></h3>
+<p>Your role: <b><%= role %></b></p>
+
+<div class="list-group mt-3">
+
+    <% if(role === 'donor') { %>
+        <a href="/donor" class="list-group-item list-group-item-action">➕ Add Donor Details</a>
+    <% } %>
+
+    <a href="/search" class="list-group-item list-group-item-action">🔍 Search Donors</a>
+
+    <% if(role === 'admin') { %>
+        <a href="/admin" class="list-group-item list-group-item-action text-danger">🛠 Admin Panel</a>
+    <% } %>
+
+</div>
+
+<%- include('partials/footer') %>
