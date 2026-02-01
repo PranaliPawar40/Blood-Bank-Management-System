@@ -1,0 +1,3 @@
+🩸 Blood Bank Management System
+
+This is a web-based Blood Bank Management System developed to manage blood donor information and help users find suitable donors easily. The system allows donors to register their details and users to search donors based on blood group and location. It follows a role-based approach where different users see different options after login. The project is built using Node.js, Express.js, EJS, and MySQL, with session-based authentication to ensure secure access. The application provides a simple and user-friendly interface for efficient donor management and searching.
